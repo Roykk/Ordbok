@@ -1,0 +1,4 @@
+Ordbok
+======
+
+playing with phonegap
