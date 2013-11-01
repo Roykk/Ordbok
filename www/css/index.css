@@ -17,7 +17,7 @@
  * under the License.
  */
 
-
+body {  min-width:400px; }
 .hidden {
     display:none;
 }
@@ -52,10 +52,15 @@
   font-size: 25px;
   padding:4px 2px 0px 2px;
   margin:5px 3px 5px 1px;
+  width:335px;
 }
 .navbar-brand a{
   color: #C0C0C0;
   text-decoration:none;
+}
+
+.input-group  {
+
 }
 
 .btn-sm{
