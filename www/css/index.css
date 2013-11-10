@@ -17,26 +17,43 @@
  * under the License.
  */
 
-body {  min-width:400px; }
+body {  
+  min-width:360px; 
+  width: 100%;
+}
 .hidden {
     display:none;
 }
 
-.btn.btn-sm.active{
-	/*background-color: #e5e5e5;  
+input#srch-term.form-control {
+    padding-left:26px;
+    width: 180px;
 
-  /* background-repeat: repeat-x;  Repeat the gradient 
-  background-image: -moz-linear-gradient(top, #AAAAAA 0%, #e5e5e5 100%);  
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+
-  background-image: -webkit-linear-gradient(top, #AAAAAA 0%,#e5e5e5 100%); 
-  background-image: -ms-linear-gradient(top, #AAAAAA 0%,#e5e5e5 100%);  
-  background-image: -o-linear-gradient(top, #AAAAAA 0%,#e5e5e5 100%); 
-  background-image: linear-gradient(top, #AAAAAA 0%,#e5e5e5 100%);
-  */
-  }
-.btn-sm{
-	margin-bottom:5px;
 }
+
+form.form-search {
+    position: relative;
+}
+
+div.form-search:before {
+    content:'';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url(http://getbootstrap.com/2.3.2/assets/img/glyphicons-halflings.png);
+    background-position: -48px 0;
+    position: absolute;
+    top:9px;
+    left:8px;
+    opacity: .5;
+    z-index: 1000;
+}
+
+.form-search .form-control{
+  height: 27px; 
+  margin-top: 2px;
+}
+
 #bokmalBtn{
   margin-left: 2px;
   border-right: 1px solid #clouds;
@@ -48,12 +65,14 @@ body {  min-width:400px; }
 	margin-top: 5px;
   margin-left: 2px;
 }
+
 /* Navbar changes */
 .navbar-brand{
   font-size: 25px;
+  line-height: 27px;
   padding:4px 2px 0px 2px;
   margin:5px 3px 5px 1px;
-  width:335px;
+  width:290px;
 }
 .navbar-brand a{
   color: #C0C0C0;
@@ -177,11 +196,6 @@ body {  min-width:400px; }
 
 
 
-.'btn'-sm{
-  margin-top:4px 
-}
-.form-grp{
-  display: inline-block;
-}
+
 
 
