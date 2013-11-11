@@ -35,18 +35,17 @@ form.form-search {
     position: relative;
 }
 
-div.form-search:before {
-    content:'';
-    display: block;
-    width: 14px;
-    height: 14px;
-    background-image: url(http://getbootstrap.com/2.3.2/assets/img/glyphicons-halflings.png);
-    background-position: -48px 0;
-    position: absolute;
-    top:9px;
-    left:8px;
-    opacity: .5;
-    z-index: 1000;
+.glyphicon.glyphicon-search.search-icon{
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  font-size: 18px; 
+  color:#D3D3CF;
+}
+
+.glyphicon.glyphicon-search.search-icon:hover{
+  font-size: 20px;
+  top:7px;
 }
 
 .form-search .form-control{
