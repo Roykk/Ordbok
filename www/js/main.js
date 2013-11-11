@@ -13,11 +13,17 @@ $(function(){
     			dataType: "html",
     			success: function(data){
        			html = data;
-       			//hvis bokmål er checked
-       			$("#bokmaal").html($(html).find("#byttutBM").html());
-
-       			//hvis nynorsk er checked
-       			$("#nynorsk").html($(html).find("#byttutNN").html());
+       			if(isBokmal()){
+              $("#bokmaalResult").html($(html).find("#byttutBM").html());
+              $("#nynorsk").hide("slow"); 
+              $("#bokmaalResult").show("slow");
+            }else{
+              $("#nynorskResult").html($(html).find("#byttutNN").html());
+              $("#bokmaal").hide("slow");
+              $("#nynorskResult").show("slow");
+            }
+       			
+       			
 
 
        			//ordforklaring span.tydningC.kompakt))
@@ -50,6 +56,11 @@ function getActionUrl(){
   return "http://www.vg.no"; 
   //this is commented out to not spam uioordbok with wrongfull queries
   //"http://www.nob-ordbok.uio.no/perl/ordbok.cgi"
+}
+
+function isBokmal(){
+    return !myonoffswitch.checked;
+    //return!$("#myonoffswitch").is(':checked');
 }
 
 		

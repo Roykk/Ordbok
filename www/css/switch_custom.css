@@ -30,14 +30,14 @@
 }
 
 .onoffswitch-inner:before {
-    content: "Bokmål";
-    padding-left: 10px;
+    content: "Nynorsk";
+    padding-left: 8px;
     background-color: #27292B; color: #19B0B0;
 }
 
 .onoffswitch-inner:after {
-    content: "Nynorsk";
-    padding-right: 10px;
+    content: "Bokmål";
+    padding-right: 14px;
     background-color: #27292B; color: #19B0B0;
     text-align: right;
 }
