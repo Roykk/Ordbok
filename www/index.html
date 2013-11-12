@@ -26,6 +26,7 @@
         
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/modified-bootstrap-navbar.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/switch_custom.css" />
 
@@ -37,90 +38,77 @@
     </head>
     <body>
         <nav class="navbar navbar-custom navbar-static-top" role="navigation">
-
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="navbar-brand">  
-                <form id="searchForm" name="searchForm" method="get">
-                    <div class="form-search input-group input-group-sm">
-                        <i id="searchIcon" class="glyphicon glyphicon-search search-icon"></i>
-                        <input type="search" result="5" class="form-control" placeholder="Søk..." name="searchText" id="srch-term">
-                        <div class="input-group-btn">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" unchecked>
-                                <label class="onoffswitch-label" for="myonoffswitch">
-                                    <div class="onoffswitch-inner"></div>
-                                    <div class="onoffswitch-switch"></div>
-                                </label>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">  
+                    <form id="searchForm" name="searchForm" method="get">
+                        <div class="form-search input-group input-group-sm">
+                            <i id="searchIcon" class="glyphicon glyphicon-search search-icon"></i>
+                            <input type="search" result="5" class="form-control" placeholder="Søk..." name="searchText" id="srch-term">
+                            <div class="input-group-btn">
+                                <div id="spraakSwitch" class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" unchecked>
+                                    <label class="onoffswitch-label" for="myonoffswitch">
+                                        <div class="onoffswitch-inner"></div>
+                                        <div class="onoffswitch-switch"></div>
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-        
-
-        </div>
-    </div>
-
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-
-        <ul class="nav navbar-nav">
-            <li><a href="#">/advanced</a></li>
-            <li><a href="#">/other</a></li>
-            <li><a href="#">/about</a></li>
-            <li><a href="#">/donate</a></li>
-        </ul>
-
-    
-
-    </div>
-</nav>
+                    </form>
+                 </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">/advanced</a></li>
+                    <li><a href="#">/other</a></li>
+                    <li><a href="#">/about</a></li>
+                    <li><a href="#">/donate</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <div class="resultBox" id="result" class="searchResult">
-            <div class="bokmalResult" id="bokmaal">
-                <div class="sokeTreff">
-                    <div class="bokmalOrd">moro</div>
-                    <div class="bokmalBetydning">
+            <div class="result" id="bokmalResult">
+                <div id="treff1" class="sokeTreff">
+                    <div id="ordtreff" class="ord">moro</div>
+                    <div class="betydning">
                         I moro m1, f1 ( av I mot i bet. 'sinn' og I ro i e bet. 'fornøyelse') // glede, skøy, tidsfordriv, underholdning; levendans og m- / være med på m-a også: være med på alt som foregår, ta det som følger med / det ble brått slutt på m-a / uskyldig m- / være full av m- / jeg skulle ha m- av å prøve lyst til, interesse av / for m- skyld / ha m- av noe(n) // iron:nå begynner det å bli m- nå har det gått for langt, nå går det for vidt
                     </div>
                 </div>
-                <div class="sokeTreff">
-                    <div class="bokmalOrd">moro</div>
-                    <div class="bokmalBetydning">
+                <div id="treff2" class="sokeTreff">
+                    <div class="ord">moro</div>
+                    <div class="betydning">
                         II moro a3 morsom, hyggelig, interessantha det m- / så m-! / det var m- å hilse på deg
                     </div>
                 </div>
             </div>
-            <div id="nynorskResult">
-
-
+            <div class="result" id="nynorskResult" style="display:none">
+                <div id="treff1" class="sokeTreff">
+                    <div class="ordtreff">moro</div>
+                    <div class="betydning">      
+                        I moro f1 (av I mot (1) og I ro) glede (I), gaman, hugnad; skøy; tidtrøyte, underhalding; spetakkel, levendans og moro / for moro skuld / ha moro av noko(n) / eg skulle ha moro av å prøve lyst til, interesse av / gjere noko på moro på skøy, skjemt / finne på moro / det vart brått slutt på moroa
+                        // med på moroa òg: med på alt som går føre seg, ta det som følgjer med
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="DUMMY hidden">
-           
-            this is just a list over the req urls:
-            NoJson-fullresp: http://www.nob-ordbok.uio.no/perl/ordbok.cgi?OPP=heis&bokmaal=+
-            short-json-autocompl: http://www.nob-ordbok.uio.no/perl/lage_ordliste_liten_nr2000.cgi?spr=bokmaal&query=heis       
-
-        </div>
         
         <div class="navbar-fixed-bottom">Footer info thingy</div>
+        
+        <!-- scriptsimports -->
         <script type="text/javascript" src="cordova.js"></script>
-         
-        <!--<script type="text/javascript" src="js/jquery.mobile.1.3.2.min.js"></script> -->
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
         <script type="text/javascript" src="js/main.js"></script>
-
-
-
-        
+        <!-- scriptsimports  end-->        
     </body>
 </html>
