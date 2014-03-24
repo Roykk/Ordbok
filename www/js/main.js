@@ -72,7 +72,7 @@ function findMeaningInArticle(article){
         return '<div class="intro">' + intro +'</div>' + '<div class="wordUsage">' +content + '</div>';
 
     }
-    return content;
+    return '<div class="wordUsage">' +content + '</div>';
 
 }
 
@@ -85,11 +85,11 @@ function generateHtml(hitWords,hitArticles, languageId){
     if(hitWords.length>0){
         for (var i=0;i<hitWords.length;i++){
             htmlResult += '<div id="treff' + i +'" class="sokeTreff">' +
-                '<div id="ordtreff" class="ord">' + $(hitWords[i]).html() + '</div></div>';
+                '<div id="ordtreff" class="wordHit">' + $(hitWords[i]).html() + '</div>';
 
             var article = hitArticles[i];
             var meaningArray = findMeaningInArticle(article);
-            htmlResult+='<div id="betydning">' + meaningArray + '</div>';
+            htmlResult+='<div id="meaning">' + meaningArray + '</div></div>';
         }
     }else {
         htmlResult="Ingen treff";

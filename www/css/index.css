@@ -50,7 +50,6 @@ form.form-search {
 /*magnifyingglass css end*/
 
 
-
 /* Navbar-brand changes to make searchinput work as a brand */
 .navbar-brand{
   font-size: 25px;
@@ -64,6 +63,50 @@ form.form-search {
   text-decoration:none;
 }
 /* Navbar-brand changes end*/
+
+
+.result .wordHit{
+    font-weight:bold;
+    margin-left: 2px;
+}
+
+.result .wordUsage {
+    margin-left: 2px;
+
+}
+.result .intro {
+    margin-left: 2px;
+}
+
+.sokeTreff {
+    border-bottom: 1px solid #E9E9E9 ;
+
+}
+
+#meaning .wordUsage{
+    font-style: italic;
+    margin-bottom: 14px;
+}
+
+.navbar.navbar-custom.navbar-static-top {
+    margin-bottom:1px;
+}
+
+.result {
+    background-color:#CECECE
+}
+
+body {
+    background-color: #E9E9E9 ;
+}
+/* words content */
+
+.navbar-fixed-bottom {
+    text-align: center;
+    border-top: 1px solid #CECECE;
+    background-color: #3f4346;
+    color: #19b0b0;
+}
 
 
 
