@@ -19,8 +19,8 @@
 
 .onoffswitch-inner {
     width: 200%; margin-left: -100%;
-    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
-    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+    -moz-transition: margin 0.15s ease-in 0s; -webkit-transition: margin 0.15s ease-in 0s;
+    -o-transition: margin 0.15s ease-in 0s; transition: margin 0.15s ease-in 0s;
 }
 
 .onoffswitch-inner:before, .onoffswitch-inner:after {
@@ -47,8 +47,8 @@
     background: #19B0B0;
     border: 2px solid #19B0B0; border-radius: 20px;
     position: absolute; top: 0; bottom: 0; right: 69px;
-    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
-    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+    -moz-transition: all 0.15s ease-in 0s; -webkit-transition: all 0.15s ease-in 0s;
+    -o-transition: all 0.15s ease-in 0s; transition: all 0.15s ease-in 0s;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
